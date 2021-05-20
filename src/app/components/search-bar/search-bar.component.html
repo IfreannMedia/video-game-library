@@ -1,5 +1,5 @@
 <div class="search-container">
-    <form action="" class="search-form">
+    <form action="" #form="ngForm" (ngSubmit)="onSubmit(form)" class="search-form">
         <span class="logo" routerLink="/">NgVGBD</span>
         <input class="search-input"
             name="search"
