@@ -19,6 +19,10 @@ export interface ApiResponse<T> {
 }
 
 interface Genre {
+    name: string;
+}
+
+interface ParentPlatform {
     platform: {
         name: string;
     };
