@@ -13,10 +13,6 @@ export class HttpHeadersInterceptor implements HttpInterceptor {
         next: HttpHandler
     ): Observable<HttpEvent<any>> {
         req = req.clone({
-            setHeaders: {
-                'x-rapidapi-key': 'KEY HERE',
-                'x-rapidapi-host': 'rawg-video-games-database.p.rapidapi.com' 
-            },
             setParams: {
                 key: 'e40addKeyHere123'
             }
