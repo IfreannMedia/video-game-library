@@ -19,9 +19,7 @@ export class HttpService {
       params2.set('search', search);
       console.log(params);
       console.log(params2);
-      debugger;
     }
-
     return this.http.get<ApiResponse<Game>>(`${env.BASE_URL}/games`, {
       params: params
     });
