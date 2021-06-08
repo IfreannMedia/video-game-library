@@ -12,9 +12,12 @@ export interface Game {
     ratings: Array<Rating>;
     screenshots: Array<Screenshot>;
     trailers: Array<Trailer>;
+    id: string;
 }
 
 export interface ApiResponse<T> {
+    next: string;
+    previous: string;
     results: Array<T>
 }
 
