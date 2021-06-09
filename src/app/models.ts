@@ -6,7 +6,7 @@ export interface Game {
     website: string;
     description: string;
     metacritic: number;
-    genre: Array<Genre>;
+    genres: Array<Genre>;
     parent_platforms: Array<ParentPlatform>;
     publishers: Array<Publisher>;
     ratings: Array<Rating>;

@@ -1,3 +1,7 @@
+import { HttpService } from './../../services/http.service';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { Game } from './../../models';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,9 +12,30 @@ import { Component, OnInit } from '@angular/core';
 export class DetailsComponent implements OnInit {
 
   public gameRating = 0;
-  constructor() { }
+  public gameId: string;
+  public game: Game;
+  routeSub: Subscription = new Subscription();
+  gameSub: Subscription = new Subscription();
+
+  constructor(private activatedRoute: ActivatedRoute,
+    private httpService: HttpService) { }
 
   ngOnInit(): void {
+    this.routeSub = this.activatedRoute.params.subscribe((params: Params) => {
+      this.gameId = params['id'];
+      this.getGameDetails(this.gameId);
+    });
+
+  }
+
+  getGameDetails(id: string): void {
+    this.gameSub = this.httpService.getGameDetails(id).subscribe((game: Game) => {
+      this.game = game;
+      console.log('got game details: ', game);
+      setTimeout(()=>{
+        this.gameRating = this.game.metacritic;
+      },1);
+    })
   }
 
   getColor(value: number): string {
