@@ -1,8 +1,6 @@
 <div class="details">
     <div class="game-banner">
-        <img src="" 
-        alt="background image" 
-        class="game-banner-img">
+        <img src="https://wallpapercave.com/wp/wp1971624.jpg" alt="background image" class="game-banner-img">
     </div>
     <div class="game-content">
         <div class="details-wrapper">
@@ -15,9 +13,10 @@
                     <span>RPS</span>
                 </p>
                 <div class="game-gauge">
-                    <mwl-gauge>
-
+                    <mwl-gauge class="two" [max]="100" [dialStartAngle]="100" [dialEndAngle]="0" [value]="gameRating"
+                        [animated]="true" [color]="getColor" [animationDuration]="2">
                     </mwl-gauge>
+                    <a href="" target="_blank" class="game-gauge-label">Metacritic</a>
                 </div>
             </div>
         </div>
