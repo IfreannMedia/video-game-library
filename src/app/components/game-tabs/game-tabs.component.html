@@ -1,5 +1,5 @@
 <div class="game-tabs">
-    <mat-tab-group mat-align-tabs="start" backgroundColor="primary">
+    <mat-tab-group mat-align-tabs="center" backgroundColor="primary">
         <mat-tab label="about">
             <p *ngIf="game.parent_platforms?.length" class="game-tabs-par">
                 Platforms:
@@ -17,7 +17,7 @@
                 <a href="{{game.website}}" target="_blank" class="game-tabs-link">Game website</a>
             </p>
             <div class="game-description" [innerHtml]="game.description"></div>
-            <p class="game-tabs-voice">
+            <p class="game-tabs-votes">
                 <ng-container *ngFor="let rating of game.ratings">
                     <span *ngIf="rating.title ==='exceptional'">
                         <mat-icon class="game-votes-up">thumb_up</mat-icon>

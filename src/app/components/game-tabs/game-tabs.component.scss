@@ -5,23 +5,23 @@
         color: #fff;
         text-align: left;
         padding: 10px;
-    }
-
-    &-par {
-        padding: 20px 20px 0 20px;
-        margin-bottom: 0;
-    }
-
-    &-link {
-        color: #fff;
-    }
-
-    &-votes {
-        margin-left: 20px;
-        display: flex;
     
-        &-count {
-            margin-left: 5px;
+        &-par {
+            padding: 20px 20px 0 20px;
+            margin-bottom: 0;
+        }
+    
+        &-link {
+            color: #fff;
+        }
+
+        &-votes {
+            margin-left: 20px;
+            display: flex;
+        
+            &-count {
+                margin-left: 5px;
+            }
         }
     }
 
